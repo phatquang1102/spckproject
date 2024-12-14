@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course detail Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+    <body class="flex flex-col gap-[50px] ">
+        <!--Header banner-->
+        <header class="bg-[white] fixed  flex justify-center top-0 left-0 ">
+            <div class="menubar flex justify-between items-center gap-[100px]">
+                
+                <div class="logo flex justify-between text-[Black] font-bold text-[28px] leading-[33.6px]">
+                    <img src="./picture/Isolation_Mode.png">
+                    <p class="text-[black]">EduPress</p>
+        
+                </div>
+                <nav class="navbar ">
+                    <ul class="text-[16px] font-[600]">
+                        <li><a href="./Homepage.html">Home</a></li>
+                        <li><a href="./CourselistingPage.html">Course</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li>
+                            <a href="">Page
+                                <img src="./picture/Icon1.png"/>
+                            </a>
+                            
+                        </li>
+                        <li><a href="">LearnPress Add-On</a></li>
+                        <li><a href="">Premium Theme</a></li>
+                    </ul>
+                </nav>
+                <div class="login flex items-align gap-[20px]">
+                    <button class=""><a href="Loginpage.html">Login/ Register </a></button>
+                    <button class="rounded-full border-2 border-[#FF782D]"><img class="px-[14px] py-[14px]" src="./picture/Icon.png"></button>
+                </div>
+            </div>
+        </header>
+
+        <section class="flex mt-[60px] bg-[#F5F5F5]">
+            <div class="Breakcrumb max-w-screen-xl mx-auto px-4 py-[18px] flex gap-[8px] bg-[#F5F5F5]  ">
+                <div class="flex gap-[8px] items-center py-[18px]">
+                    <div><a href="Homepage.html">Homepage</a></div>
+                    <div class="text-[#9D9D9D]">></div>
+                    <div><a href="CourselistingPage.html">Course</a></div>
+                    <div>></div>
+                    <div><p>The Ultimate Guide To The BestWordPress LMS Plugin</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ThumbnailCourse bg-[black] flex justify-center ">
+            <div class="ThumbnailCourseContainer flex items-center gap-[30px]">
+                <div class="ThumbnailCourseInfo">
+                    <div class="Photography1 flex gap-[20px] items-center">
+                            <div class="rounded-[8px] bg-[#555555] px-[12px] py-[8px]"><span style="color:#EAEAEA;" class="course-category"></span>
+                            </div>
+                        <span class="author text-[#FFFFFF]"></span>
+                    </div>
+                    <h1>The Ultimate Guide to the best WordPress LMS Plugin</h1>
+                    <div class="Info-container flex gap-[24px]">
+                        <div class="flex gap-[4px]">
+                            <img src="./picture/timer.png">
+                            <span class="time"></span>
+                            
+                        </div>
+                        <div class="flex gap-[4px]">
+                            <img src="./picture/hat.png">
+                            <span class="students"></span>
+                        </div>
+                        <div class="flex gap-[4px]">
+                            <img src="./picture/level.png">
+                            <span class="level"></span>
+                        </div>
+                        <div class="flex gap-[4px]">
+                            <img src="./picture/book.png">
+                            <p><span class="lessons"></span> Lessons</p>
+                        </div>
+                        <div class="flex gap-[4px]">
+                            <img src="./picture/quiz.png">
+                            <p><span class="quiz"></span> Quizzes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ThumbnailpictureContainer mt-[50px] bg-[white] rounded-[20px] flex flex-col ">
+                    <img class="Thumbnailpicture" src="" >
+                    <div class="flex justify-evenly items-center py-[30px]">
+                        <div class="price-status flex gap-[5px] ">
+                            <span class="course-price line-through"></span>
+                            <span style ="color:green;" class="course-status"></span>
+                        </div>
+                        <button class="ExploreCourse" id="startnow">Start Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--Curriculum template-->
+        <template id="Curriculum-template">
+            <div class="Curriculumcontainer relative">
+                <div class="flex py-[16px] px-[20px] bg-[white] items-center min-w-[790px] justify-between ">
+                    <div class="flex gap-[10px] items-center  ">
+                        <div>
+                            <button class="dropbtn arrow down flex items-center" data-index="{index}" onclick="dropdown(event)"></button>
+                        </div>
+                        <div>
+                            <h1 class="SectionTitle hover:text-[#FF782D] hover:cursor-pointer" ></h1>
+                        </div>
+                    </div>
+                    <div class="flex gap-[20px] justify-between items-center">
+                        <p><span class="Lessons"></span> Lessons</p>
+                        <p><span class="Duration"></span> Mins</p>
+                    </div>
+                </div>
+                <div class="Curriculumdropdown-content  " data-index="{index}" id="Curriculumdropdown">
+                    <div class="flex flex-col"  id="content-section">
+                        
+                    </div> 
+                </div>
+            </div>
+            
+        </template>
+
+
+
+        <section class="course-details flex justify-center items-center">
+            <div class="course-detailsContainer flex flex-col justify-center items-center ">
+                <div class="tab flex justify-center items-center min-w-[850px]">
+                    <button class="tablinks  " onclick="opencoursedetails(event,'Overview')" id="tablinks1">Overview</button>
+                    <button class="tablinks  " onclick="opencoursedetails(event,'Curriculum')">Curriculum</button>
+                    <button class="tablinks  " onclick="opencoursedetails(event,'Instructor')">Instructor</button>
+                    <button class="tablinks  " onclick="opencoursedetails(event,'FAQs')" id="tablinks4">FAQs</button>
+                    
+                </div>
+
+                <div class="tab-contentcontainer flex justify-center">
+                    <div id="Overview" class="tab-content max-w-[850px] bg-[#F5F5F5] px-[30px] py-[30px] flex flex-col gap-[20px]" >
+                        <p></p>
+                    </div>
+
+                    <div  id="Curriculum" class="tab-content flex flex-col gap-[20px] py-[30px] px-[30px] items-center justify-center hidden max-w-[850px] bg-[#F5F5F5]">
+                        <div>
+                            <p>LearnPress is a comprehensive WordPress LMS Plugin for WordPress. This is one of the best WordPress LMS Plugins which can be used to easily create & sell courses online.</p>
+                        </div>
+                        <div id="Curriculum-container">
+
+                        </div>                 
+                    </div>
+
+                    <div id="Instructor" class="tab-content hidden flex flex-col gap-[30px] px-[30px] py-[30px]  justify-center max-w-[850px] bg-[#F5F5F5]">
+                        <div class="flex gap-[24px]  justify-center">
+                            <div class="">
+                                <img class="Instructorpicture" src=""></div>
+                            <div class="flex flex-col gap-[12px]">
+                                <h3 class="Instructorname"></h3>
+                                <p class="Instructordescribe"></p>
+                                <div class="flex gap-[4px] items-center">
+                                    <div><img src="picture/hat.png"></div>
+                                    <p><span class="Instructorstudents"></span> Students</p>
+                                </div>
+                                <div class="flex gap-[4px] items-center">
+                                    <div><img src="picture/book.png"></div>
+                                    <p><span class="Instructorlessons"></span> Lessons</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                        <div>
+                            <p class="quotes"></p>
+                        </div>
+                        <div class="flex gap-[12px]">
+                            <p> Follow:</p>
+                            <div>
+                                
+                                <a href="https://www.facebook.com/"><img src="picture/facebook.png"></a>
+                            </div>
+                            <div>
+                                <a href=""><img src="picture/incon2.png"></a>
+                            </div>
+                            <div>
+                                <a href="https://www.instagram.com/"><img src="picture/ins.png"></a>
+                            </div>
+                            <div>
+                                <a href="https://x.com/"><img src="picture/X.png"></a>
+                            </div>
+                            <div>
+                                <a href="https://www.youtube.com/"><img src="picture/ytb.png"></a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div id="FAQs" class="tab-content hidden max-w-[850px] bg-[#F5F5F5] flex flex-col px-[30px] py-[30px] gap-[20px]">
+                        
+
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+            
+
+            
+        <section class="flex justify-center items-center">
+            <div class="commentContainer max-w-[850px] flex flex-col gap-[30px] justify-center ">
+                <div class="flex flex-col gap-[12px]">
+                    <h1>Leave A Comment</h1>
+                    <span class="TitleBanner2">Your email address will not be published. Required fields are marked *</span>
+                </div>
+                <form class="flex flex-col gap-[20px] ">
+                    <div class="flex gap-[20px]  justify-stretch  w-[850px]  ">
+                        
+                        <div class="input-box border border-[#9D9D9D] py-[10p] px-[16px] rounded-[8px] h-[48px] w-[50%]">
+                            <input type="text" name="name" id="name" placeholder="Name*" required>
+        
+                        </div>
+                        <div class="input-box border border-[#9D9D9D] py-[10p] px-[16px] rounded-[8px] h-[48px] w-[50%]">
+                            <input type="text" name="email" id="Email" placeholder="Email*" required>
+        
+                        </div>
+                    </div>
+                        
+                    <div class="input-box border border-[#9D9D9D] py-[10p] px-[16px] rounded-[8px] h-[110px]">
+                        <input type="text" name="comment" id="comment" placeholder="Comment*">
+                    </div>
+                    <div>
+                        <label class=" flex gap-[6px] ">
+                            <input type="checkbox" checked="checked">Save my name, email in this brower for the next time I comment
+                            <span class="checkmark"></span>
+                    </div>
+                    <div>
+                        <button class="ExploreCourse">Post Comment</button>
+                    </div>
+                        
+                </div>
+        </section>
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <footer class="flex flex-col gap-[90px] mt-[90px] pt-[90px] bg-[#F5F5F5] justify-center items-center">
+            <div class="footerPage flex justify-evenly">
+                <!--Edupressfootagebox-->
+                <div class="w-1/5  flex gap-[32px] flex-col">
+                    <div class="logo flex text-[Black] font-bold text-[28px] leading-[33.6px]">
+                        <img src="./picture/Isolation_Mode.png">
+                        <p>EduPress</p>
+                        
+                    </div>
+                    <div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                    
+                
+                <div class="flex gap-[32px] flex-col">
+                    <div>
+                        <h1>GET HELP</h1>
+                    </div>
+                    <div class="Edupressfootagebox"><ul>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Latest Articles</a></li>
+                        <li><a href="">FAQ</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="flex gap-[32px] flex-col">
+                    <div><h1>PROGRAMS</h1></div>
+                    <div class="Edupressfootagebox">
+                        <ul>
+                            <li><a href="">Art & Design</a></li>
+                            <li><a href="">Business</a></li>
+                            <li><a href="">IT & Spftware</a></li>
+                            <li><a href="">Langugage</a></li>
+                            <li><a href="">Programming</a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+                <div class="w-1/5 flex   flex-col gap-[32px]">
+                    <div class=""><h1>CONTACT US</h1></div>
+                    <div class="Edupressfootagebox">
+                        <ul>
+                            <li><a href="">Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</a></li>
+                            <li><a href="">Tel: + (123) 2500-567-8988</a></li>
+                            <li><a href="">Mail: supportlms@gmail.com</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex gap-[12px]">
+                        <div>
+                            
+                            <a href="https://www.facebook.com/"><img src="picture/facebook.png"></a>
+                        </div>
+                        <div>
+                            <a href=""><img src="picture/incon2.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://www.instagram.com/"><img src="picture/ins.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://x.com/"><img src="picture/X.png"></a>
+                        </div>
+                        <div>
+                            <a href="https://www.youtube.com/"><img src="picture/ytb.png"></a>
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+    
+            <!--Copyright-->
+            <div class="Copyright mb-[30px]">
+                <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
+            </div>
+    
+        </footer>
+        <div class="" id="sticky">
+            <button class="scroll-up-btn">
+                <i class="arrow-up"></i>
+            </button>  
+            </div>
+
+            <script src="/js/index.js"></script>
+</body>
+</html>

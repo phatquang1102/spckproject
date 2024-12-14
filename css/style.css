@@ -1,0 +1,842 @@
+
+
+body{
+    margin:0px;
+}
+header{
+    height: 72px;
+    width: 100%;
+    
+}
+.header{
+     font-family: 'Exo';
+}
+.menubar{
+    height: 100%;
+    
+}
+.navbar ul{
+    list-style-type: none;
+    
+    
+    
+}
+.navbar a{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 26.5px;
+    padding-bottom: 26.5px;
+
+}
+.navbar a:hover{
+    background-color: #F5F5F5;
+    color: #FF782D;
+}
+.navbar li{
+float:left;
+}
+
+.Announce{
+    background-image: linear-gradient(90deg,#FFF5BE,#D0F7EA);
+    position: relative;
+    margin-top:75px;
+
+}
+
+.bag-img {
+    position: absolute;
+    padding-top: 40px;
+    padding-left: 80px;
+    padding-bottom:300px;
+    padding-right: 1390px;
+    opacity: 50%;
+}
+
+.describe h1{
+    font-family: Exo;
+    font-weight: 600;
+    font-size:48px;
+    line-height: 57.6px;
+}
+.describe p{
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size:18px;
+    line-height: 27px;
+    color:#555555;
+}
+
+    
+    
+    
+    
+
+.button1 {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+
+}
+.describe {
+    gap:24px;
+    display: flex;
+    
+    flex-direction: column;
+}
+.button1 button{
+    font-family: 'Jost';
+    align-self: flex-start;
+
+}
+.onlineschool {
+    position: absolute;
+    width: 977px;
+    min-height: 419px;
+    margin-top: 141px;
+    margin-bottom:140px;
+    margin-left: 1120px;
+    margin-right:223px;
+    z-index: 1;
+    opacity: 50%;
+
+}
+.girl{
+    z-index:2;
+}
+
+.Topcategories h2{
+font-family: Exo;
+
+}
+.Topcategories p{
+    font-family: Jost;
+    font-weight: 400;
+    size:18px;
+    line-height: 27px;
+    color: #555555;
+}
+
+
+
+.button2 button{
+    font-family: 'Jost';
+    font-weight: 500;
+    size:18px;
+    line-height: 27px;
+}
+.CategoriesContainer{
+    display: grid;
+    grid-template-columns: repeat(5,minmax(234px,1fr));
+    gap: 30px;
+    margin-top: 16px;
+    max-width: 100%;
+    
+
+}
+.Categoriesgrid{
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding-top: 57.5px;
+    padding-bottom:57.5px;
+    
+    
+}
+.Categoriesgrid img{
+    max-width: 30px;
+    
+}
+.name{
+    font-family: exo;
+    font-weight: 600;
+    size: 20px;
+    line-height: 24px;
+    
+    
+}
+.numberofcourses{
+    font-family: Jost;
+    font-weight: 400;
+    size:18px;
+    line-height: 27px;
+    color:#555555;
+}
+
+.CategoriesContainer  .Categoriesgrid:hover{
+    transform: translate(0,-16px);
+    position: relative;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    color: #FF782D;
+    transition-duration: 0.5s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
+
+}
+.CoursesContainer {
+    display: grid;
+    grid-template-columns: repeat(3,minmax(410px,410px));
+    gap: 30px;
+    margin-top: 16px;
+    max-width: 100%;
+}
+.Coursesgrid {
+    border: 1px solid #EAEAEA;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+
+
+}
+.Coursesgrid span{
+    font-family: Jost;
+    font-weight: 500;
+    size:16px;
+    line-height: 24px;
+    color:white;
+}
+
+.CoursesContainer .Coursesgrid:hover{
+    transform: translate(0,-16px);
+    cursor:pointer;
+    position: relative;
+    transition-duration: 0.5s;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.CoursesContainer .Coursesgrid:hover .name{
+color: #FF782D;
+}
+
+.TiltleBanner1{
+    font-family:Exo;
+    size:16px;
+    font-weight: 600;
+    line-height: 19px;
+    
+}
+.TitleBanner2 {
+    font-family: Jost;
+    size:18px;
+    font-weight: 400;
+    line-height: 27px;
+    color:#555555;
+}
+
+/*Explore Course Button*/
+.ExploreCourse{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 24px;
+    padding-left: 24px;
+    font-family: Jost;
+    background-color: #FF782D;
+    color:White;
+    size: 18px;
+    line-height: 27px;
+    font-weight: 500;
+    border-radius:24px;
+    display:block;
+
+}
+
+.PromotionBanner{
+    
+    background-image: linear-gradient(to right,rgba(181, 255, 231, 1), rgba(253, 193, 193, 1));
+    min-width: 1290px;
+}
+
+.StatisticContainer{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(300px,1fr));
+    gap: 30px;
+    justify-content: space-between;
+    width: 67%;
+
+    
+}
+.StatisticBox h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:32px;
+    line-height: 38.4px;
+    color:#FF782D;
+    
+}
+.StatisticBox p{
+    font-family: 'Jost';
+    size:18px;
+}
+.StatisticBox {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:16px;
+    border-radius: 20px;
+}
+
+
+.SkillPromotionContainer h2{
+    font-family: Exo;
+    font-weight: 600;
+    size:32px;
+    line-height: 38.4px;
+    
+}
+.SkillPromotionContainer h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:32px;
+    line-height: 38.4px;
+}
+.SkillPromotionContainer p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size:18px;
+    line-height: 27px;
+    color:#555555;
+}
+
+.ProductPromotionContainer{
+background-image: linear-gradient(90deg,#FEB6B6,#B7E1FF);
+min-width: 1290px;
+}
+
+
+.ProductPromotionContainer h2{
+font-family: Exo;
+    font-weight: 600;
+    size:32px;
+    line-height: 38.4px;
+}
+.ProductPromotionContainer h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:16px;
+    line-height: 19.2px;
+}
+.ProductPromotionContainer p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size:18px;
+    line-height: 27px;
+    color:#555555;
+
+}
+
+.StudentFeedbackContainer h2{
+    font-family: Exo;
+    font-weight: 600;
+    size:32px;
+    line-height: 38.4px;
+    text-align:center;
+}
+.StudentFeedbackContainer p{
+    font-family: 'Jost';
+    font-weight: 400;
+    
+
+
+}
+
+    
+
+.StudentFeedbackBox{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(300px,300px));
+    gap:30px;
+    
+}
+.StudentFeedbackBox p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size:18px;
+    line-height: 27px;
+}
+
+.StudentFeedbackBox h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:20px;
+    line-height: 24px;
+}
+.StartContainer{
+    background-image: linear-gradient(90deg,#B7E1FF,#FEB6B6);
+    min-width: 1290px;
+    
+
+}
+.StartContainer h4{
+    font-family: Exo;
+    font-weight: 600;
+    line-height: 24px;
+}
+.articles p{
+    font-family: 'Jost';
+    size:18px;
+    font-weight: 400;
+    color:#555555;
+}
+
+.Breakcrumb{
+    width:100%;
+    height:60px;
+    font-family: 'Jost';
+    size:16px;
+    line-height: 24px;
+    font-weight: 400;
+    color:#9D9D9D;
+}
+.Breakcrumb a{
+    color:#555555;
+}
+
+.All-Courses h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:36px;
+    line-height: 43.2px;
+}
+
+.All-Courses span{
+    font-family: 'Jost';
+    font-weight: 400;
+    size:16px;
+    line-height: 24px;
+    color:#555555;
+}
+.course-bottom a{
+
+font-family: 'Jost';
+font-weight: 500;
+size:18px;
+line-height: 27px;
+text-align: right;
+}
+.pagenumber {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: 1px solid #EAEAEA;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    
+}
+.pagenumber .arrow{
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+    
+    
+  
+}
+
+.right{
+    transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+.left {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.pagenumber:hover p{
+    color:white;
+    
+    
+
+}
+.pagenumber:hover {
+    cursor: pointer;
+}
+.arrow:hover {
+    border: solid #FF782D;
+    border-width: 0 3px 3px 0;
+    padding: 3px;
+
+}
+
+.Course-Category h2{
+    font-family: Exo;
+    font-weight: 600;
+    size:20px;
+    line-height: 24px;
+}
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+.checked{
+    color:#F4BF08;
+}
+.container input:checked ~ .checkmark {
+    accent-color: #555555;
+}
+
+.footerPage h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:20px;
+    line-height: 24px;
+    color:black;
+}
+.footerPage li{
+    font-family: 'Jost';
+    font-weight: 500;
+    size:18px;
+    line-height: 45px;
+    color:#555555;
+}
+
+.Edupressfootagebox :hover {
+    color:#FF782D;
+    
+
+}
+.Copyright p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size: 18px;
+    line-height: 27px;
+    color:#555555;
+}
+.scroll-up-btn{
+    all: unset;
+    width:60px;
+    height: 60px;
+    background-color: black;
+    border-radius: 50%;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.scroll-up-btn .arrow-up{
+    width: 14px;
+    height: 14px;
+    border-left: 4px solid white;
+    border-bottom:4px solid white;
+    transform: rotate(135deg);
+    pointer-events: none;
+}
+#sticky{
+    position: fixed;
+    bottom: 200px;
+    right:200px
+    
+}
+
+.wrapper-login {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-info h1:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.course-info p:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+
+.wrapper-login .input-box {
+    width:100%;
+    height: 48px;
+    
+}
+
+.input-box input{
+    width:100%;
+    height:100%;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-family: 'Jost';
+    size:18px;
+    line-height: 27px;
+}
+
+.input-box i{
+    position: absolute;
+    right:4px;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    
+}
+.input-box i:hover{
+    cursor: pointer;
+}
+
+.remember-forget{
+    font-family: 'Jost';
+    size:27px;
+    font-weight: 400;
+    line-height: 27px;
+    color:#555555;
+}
+
+.remember-forget a:hover{
+    text-decoration: underline;
+}
+
+.btn-login {
+background-color:#FF782D;
+padding: 10px 24px;
+border:none;
+border-radius: 24px;
+color:white;
+font-family: 'Jost';
+font-weight: 500;
+size:18px;
+line-height: 27px;
+}
+
+.register-link a:hover{
+    text-decoration: underline;
+}
+
+
+.wrapper h1{
+    font-family: exo;
+    size:60px;
+    font-weight: 600;
+    line-height: 38.4px;
+}
+
+.Photography1 span {
+    font-family: 'Jost';
+    font-weight: 400;
+    size:18px;
+    line-height: 27px;
+    
+}
+.ThumbnailCourseInfo h1{
+    font-family: Exo;
+    font-weight: 600;
+    size:36px;
+    line-height: 43.2px;
+    color:white;
+}
+
+.Info-container span{
+    font-family: 'Jost';
+    font-weight: 400;
+    size:16px;
+    line-height: 24px;
+    color:#9D9D9D;
+}
+.Info-container p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size:16px;
+    line-height: 24px;
+    color:#9D9D9D;
+}
+
+.Info-container img{
+    height: 16px;
+    width: 16px;
+}
+
+.Curriculumdropdown-content{
+    display:none;
+    border: 2px solid black;
+}
+
+.Curriculumdropdown-content.show {
+    display:flex;
+    flex-direction: column;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: flex;
+    padding: 3px;
+  }
+
+
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+
+.Instructorname {
+    font-family: exo;
+    font-weight: 600;
+    size: 20px;
+    line-height: 24px;
+    
+}
+
+.Instructordescribe{
+    font-family: 'Jost';
+font-weight: 400;
+font-size:18px;
+line-height: 27px;
+color:#555555;
+}
+
+.quotes{
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size:18px;
+    line-height: 27px;
+    color:#555555;
+}
+#Instructor span{
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size:16px;
+    line-height: 24px;
+    color:#555555;
+}
+.tab button:hover {
+    background-color:#F5F5F5;}
+
+
+
+.tab button{
+    border: 1px solid #EAEAEA;
+    padding: 20px 30px ;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+#tablinks1{
+    border-top-left-radius: 20px;
+}
+#tablinks4{
+    border-top-right-radius: 20px;
+}
+.tablinks {
+    font-family: Exo;
+    font-weight: 600;
+    size:20px;
+    line-height: 24px;
+}
+.tab button:focus {
+    background-color: #ccc;
+    color: #FF782D;
+}
+.faq-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    width: 770px;
+    background-color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+.faq-question :active {
+    color: #FF782D; 
+}
+.faq-question h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.arrow-btn {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+
+}
+.faq-answer {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+}
+#Overview p {
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size:18px;
+    line-height: 27px;
+    color:#555555;
+    
+}
+#comment::-webkit-input-placeholder { 
+    position:absolute;
+    left: 0px;
+    top: 5px;
+    font-family: 'Jost';
+    font-weight: 400;
+    size:18px;
+    line-height: 27;
+    
+}
+.commentContainer h1{
+    font-family: exo;
+    font-weight: 600;
+    size: 20px;
+    line-height: 24px;
+    
+
+}
+
+.SectionTitle {
+    font-family: Exo;
+    font-weight: 600;
+    size: 16px;
+    line-height: 19px;
+    
+}
+.Lessons span,p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    color:#555555;
+    
+}
+.Duration span,p{
+    font-family: 'Jost';
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    color:#555555;
+    
+}
+.Durationlesson{
+    font-family: 'Jost';
+    font-weight: 400;
+    size: 16px;
+    line-height: 24px;
+    color:#555555;
+}
+.Title {
+    font-family: 'Jost';
+    font-weight: 400;
+    size: 18px;
+    line-height: 27px;
+    color:#000000;
+}

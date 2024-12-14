@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CourselistingPage</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+</head>
+<body class="flex flex-col gap-[60px]">
+    <!--Header banner-->
+    <header class="bg-[white] fixed  flex justify-center top-0 left-0 ">
+        <div class="menubar flex justify-between items-center gap-[100px]">
+            
+            <div class="logo flex justify-between text-[Black] font-bold text-[28px] leading-[33.6px]">
+                <img src="./picture/Isolation_Mode.png">
+                <p>EduPress</p>
+    
+            </div>
+            <nav class="navbar ">
+                <ul class="text-[16px] font-[600]">
+                    <li><a href="./Homepage.html">Home</a></li>
+                    <li><a href="./CourselistingPage.html">Course</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li>
+                        <a href="">Page
+                            <img src="./picture/Icon1.png"/>
+                        </a>
+                        
+                    </li>
+                    <li><a href="">LearnPress Add-On</a></li>
+                    <li><a href="">Premium Theme</a></li>
+                </ul>
+            </nav>
+            <div class="login flex items-align gap-[20px]">
+                <button class=""><a href="Loginpage.html">Login/ Register </a></button>
+                <button class="rounded-full border-2 border-[#FF782D]"><img class="px-[14px] py-[14px]" src="./picture/Icon.png"></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex mt-[60px] bg-[#F5F5F5]">
+        <div class="Breakcrumb max-w-screen-xl mx-auto px-4 py-[18px] flex gap-[8px] bg-[#F5F5F5]  ">
+            <div class="flex gap-[8px] items-center py-[18px]">
+                <div><a href="Homepage.html">Homepage</a></div>
+                <div class="text-[#9D9D9D]">></div>
+                <div><a href="CourselistingPage.html">Course</a></div>
+                <div>></div>
+                <div><p>The Ultimate Guide To The BestWordPress LMS Plugin</p></div>
+            </div>
+        </div>
+    </section>
+
+    <main class=" flex flex-col  items-center">
+            
+
+            
+                <!--Template cho dnah sach khoa hoc-->
+                    <template id="course-template">
+                    <div class="flex border rounded-[20px] border-[#EAEAEA]">
+                        <div class="course-image flex">
+                                <img src="" alt="">
+                                <div class="absolute rounded-[8px] bg-[Black] px-[12px] py-[8px] mt-[20px] ml-[20px]"><span style="color:#EAEAEA;" class="course-category"></span></div>
+                        </div>
+                        <div class="flex flex-col px-[20px] py-[20px] gap-[65px]">
+                            <div class="course-info">
+                            
+                                <p class="author"><a href="#"></a></p>
+                                <h1><a href="#"></a></h1>
+                            <div class="course-meta flex gap-[24px]">
+                                <div class="flex gap-[8px] justify-center items-center"><div><img src="./picture/timer.png" class="icon-clock"></div>
+                                    <div><span class="time"></span></div></li>
+                                </div>
+                                <div class="flex gap-[8px] justify-center items-center">
+                                    <div><img src="picture/hat.png" class="icon-user"></div>
+                                    <div class="text-[#555555]"><span class="students"></span> Students</div>
+                                </div>
+                                <div class="flex gap-[8px] justify-center items-center">
+                                    <div><img src="picture/level.png" class="icon-level"></div>
+                                    <div><span class="level"></span></div>
+                                </div>
+                                <div class="flex gap-[8px] justify-center items-center">
+                                    <div><img src="picture/book.png" class="icon-book"></div>
+                                    <div class="text-#555555"><span class="lessons"></span> Lessons</div>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="course-bottom flex justify-between items-center border-t ">
+                                <div class="flex gap-[8px] items-end py-[16px]">
+                                    <span class="course-price"></span>
+                                    <span style ="color:#55BE24;" class="course-status"></span>
+                                </div>
+
+                                <div class="flex py-[16px] items-end  ">
+                                    <a href="Coursedetailpage.html" class="view-more">View More</a>
+                                </div>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    </template>
+
+
+                    <!--All Courses-->
+                    <div class="flex justify-center gap-[30px] max-w-screen-xl mx-auto px-4 ">
+                        <div class="All-Courses flex flex-col gap-[40px]">
+                            <div class="flex max-w-[990px] justify-between">
+                                <div><h1>All Courses</h1></div>
+                                <div class="flex gap-[20px]">
+                                    <div class="flex justify-between border-1 border-b-2" >
+                                        <div><input type="text" name="" placeholder="Search"></div>
+                                        <div><img src="./picture/Allcourse1.png"></div>
+                                    </div>
+                                    <div> <img src="./picture/Allcourse2.png"></div>
+                                    <div><img src="./picture/Allcourse3.png"></div>
+                                </div>
+                                
+                            </div>
+                            <!--hien thi danh sach khoa hoc-->
+                            <div class="course-container flex flex-col gap-[30px] " id="course-list"></div>
+                            <div class=" flex gap-[12px] items-center justify-center">
+                                <div class="pagenumber hover:bg-[#000000] ">
+                                    <i class="arrow left"></i>
+                                </div>
+                                <div class="pagenumber hover:bg-[#000000] ">
+                                    <p>1</p>
+                                </div>
+                                <div class="pagenumber hover:bg-[#000000] ">
+                                    <p>2</p>
+                                </div>
+                                <div class="pagenumber hover:bg-[#000000]">
+                                    <p>3</p>
+                                </div>
+                                <div class="pagenumber hover:bg-[#000000] ">
+                                    <i class="arrow right"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Course-Category flex flex-col gap-[30px]">
+                            <div class="flex flex-col gap-[20px]">
+                                <div>
+                                    <h2>Course category</h2>
+                                </div>
+                                <div class="flex flex-col gap-[10px]">
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Commercial
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Office
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Shop
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Educate
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Academy
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Single family house
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Studio
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">University
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="flex flex-col gap-[20px]">
+                                <div>
+                                    <h2>Instructors</h2>
+                                </div>
+                                <div class="flex flex-col gap-[10px]">
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">Kenny White
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between ">
+                                        <div class="">
+                                            <label class="container flex gap-[4px] ">
+                                            <input type="checkbox" checked="checked">John Doe
+                                            <span class="checkmark"></span>
+                                          </label>
+                                        </div>
+                                        <div>
+                                            <p>15</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex flex-col gap-[20px]">
+                                        <div>
+                                            <h2>Price</h2>
+                                        </div>
+                                        <div class="flex flex-col gap-[10px]">
+                                            <div class="flex justify-between ">
+                                                <div class="">
+                                                    <label class="container flex gap-[4px] ">
+                                                    <input type="checkbox" checked="checked">All
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                </div>
+                                                <div>
+                                                    <p>15</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex justify-between ">
+                                                <div class="">
+                                                    <label class="container flex gap-[4px] ">
+                                                    <input type="checkbox" checked="checked">Free
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                </div>
+                                                <div>
+                                                    <p>15</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex justify-between ">
+                                                <div class="">
+                                                    <label class="container flex gap-[4px] ">
+                                                    <input type="checkbox" checked="checked">Paid
+                                                    <span class="checkmark"></span>
+                                                  </label>
+                                                </div>
+                                                <div>
+                                                    <p>15</p>
+                                                </div>
+                                            </div>
+                                            <div class="flex flex-col gap-[20px]">
+                                                <div>
+                                                    <h2>Review</h2>
+                                                </div>
+                                                <div class="flex flex-col gap-[10px]">
+                                                    <div class="flex justify-between ">
+                                                        <div class="">
+                                                            <label class="container flex gap-[4px] ">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="checkmark"></span>
+                                                          </label>
+                                                        </div>
+                                                        <div>
+                                                            <p>1025</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between ">
+                                                        <div class="">
+                                                            <label class="container flex gap-[4px] ">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="checkmark"></span>
+                                                          </label>
+                                                        </div>
+                                                        <div>
+                                                            <p>1025</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between ">
+                                                        <div class="">
+                                                            <label class="container flex gap-[4px] ">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="checkmark"></span>
+                                                          </label>
+                                                        </div>
+                                                        <div>
+                                                            <p>1025</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between ">
+                                                        <div class="">
+                                                            <label class="container flex gap-[4px] ">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="checkmark"></span>
+                                                          </label>
+                                                        </div>
+                                                        <div>
+                                                            <p>1025</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex justify-between ">
+                                                        <div class="">
+                                                            <label class="container flex gap-[4px] ">
+                                                            <input type="checkbox" checked="checked">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="fa fa-star "></span>
+                                                            <span class="checkmark"></span>
+                                                          </label>
+                                                        </div>
+                                                        <div>
+                                                            <p>1025</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flex flex-col gap-[20px]">
+                                                        <div>
+                                                            <h2>Level</h2>
+                                                        </div>
+                                                        <div class="flex flex-col gap-[10px]">
+                                                            <div class="flex justify-between ">
+                                                                <div class="">
+                                                                    <label class="container flex gap-[4px] ">
+                                                                    <input type="checkbox" checked="checked">All levels
+                                                                    <span class="checkmark"></span>
+                                                                  </label>
+                                                                </div>
+                                                                <div>
+                                                                    <p>15</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex justify-between ">
+                                                                <div class="">
+                                                                    <label class="container flex gap-[4px] ">
+                                                                    <input type="checkbox" checked="checked">Beginner 
+                                                                    <span class="checkmark"></span>
+                                                                  </label>
+                                                                </div>
+                                                                <div>
+                                                                    <p>15</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex justify-between ">
+                                                                <div class="">
+                                                                    <label class="container flex gap-[4px] ">
+                                                                    <input type="checkbox" checked="checked">Intermidiate
+                                                                    <span class="checkmark"></span>
+                                                                  </label>
+                                                                </div>
+                                                                <div>
+                                                                    <p>15</p>
+                                                                </div>
+                                                            </div>
+                                                            <div class="flex justify-between ">
+                                                                <div class="">
+                                                                    <label class="container flex gap-[4px] ">
+                                                                    <input type="checkbox" checked="checked">Expert
+                                                                    <span class="checkmark"></span>
+                                                                  </label>
+                                                                </div>
+                                                                <div>
+                                                                    <p>15</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                        </div>
+                    </div>
+    
+                    
+    </main>
+    <div class="" id="sticky">
+        <button class="scroll-up-btn">
+            <i class="arrow-up"></i>
+        </button>  
+        </div>
+    
+
+
+
+    <footer class="flex flex-col gap-[90px] mt-[90px] pt-[90px] bg-[#F5F5F5] justify-center items-center">
+        <div class="footerPage flex justify-evenly">
+            <!--Edupressfootagebox-->
+            <div class="w-1/5  flex gap-[32px] flex-col">
+                <div class="logo flex text-[Black] font-bold text-[28px] leading-[33.6px]">
+                    <img src="./picture/Isolation_Mode.png">
+                    <p class="text-[black]">EduPress</p>
+                    
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+                
+            
+            <div class="flex gap-[32px] flex-col">
+                <div>
+                    <h1>GET HELP</h1>
+                </div>
+                <div class="Edupressfootagebox"><ul>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Latest Articles</a></li>
+                    <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex gap-[32px] flex-col">
+                <div><h1>PROGRAMS</h1></div>
+                <div class="Edupressfootagebox">
+                    <ul>
+                        <li><a href="">Art & Design</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">IT & Spftware</a></li>
+                        <li><a href="">Langugage</a></li>
+                        <li><a href="">Programming</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-1/5 flex   flex-col gap-[32px]">
+                <div class=""><h1>CONTACT US</h1></div>
+                <div class="Edupressfootagebox">
+                    <ul>
+                        <li><a href="">Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</a></li>
+                        <li><a href="">Tel: + (123) 2500-567-8988</a></li>
+                        <li><a href="">Mail: supportlms@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="flex gap-[12px]">
+                    <div>
+                        
+                        <a href="https://www.facebook.com/"><img src="picture/facebook.png"></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="picture/incon2.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/"><img src="picture/ins.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://x.com/"><img src="picture/X.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/"><img src="picture/ytb.png"></a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <!--Copyright-->
+        <div class="Copyright mb-[30px]">
+            <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
+        </div>
+
+    </footer>
+
+
+
+
+
+
+    
+    <script src="/js/index.js"></script>
+   
+   
+    
+</body>
+</html>

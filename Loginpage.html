@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href='https://fonts.googleapis.com/css?family=Exo' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    <!--Header banner-->
+    <header class="bg-[white] fixed  flex justify-center top-0 left-0 ">
+        <div class="menubar flex justify-between items-center gap-[100px]">
+            
+            <div class="logo flex justify-between text-[Black] font-bold text-[28px] leading-[33.6px]">
+                <img src="./picture/Isolation_Mode.png">
+                <p>EduPress</p>
+    
+            </div>
+            <nav class="navbar ">
+                <ul class="text-[16px] font-[600]">
+                    <li><a href="./Homepage.html">Home</a></li>
+                    <li><a href="./CourselistingPage.html">Course</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li>
+                        <a href="">Page
+                            <img src="./picture/Icon1.png"/>
+                        </a>
+                        
+                    </li>
+                    <li><a href="">LearnPress Add-On</a></li>
+                    <li><a href="">Premium Theme</a></li>
+                </ul>
+            </nav>
+            <div class="login flex items-align gap-[20px]">
+                <button class=""><a href="Loginpage.html">Login/ Register </a></button>
+                <button class="rounded-full border-2 border-[#FF782D]"><img class="px-[14px] py-[14px]" src="./picture/Icon.png"></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="flex mt-[60px] bg-[#F5F5F5]">
+        <div class="Breakcrumb max-w-screen-xl mx-auto px-4 py-[18px] flex gap-[8px] bg-[#F5F5F5]  ">
+            <div class="flex gap-[8px] items-center py-[18px]">
+                <div><a class="text-[#555555]" href="Homepage.html">Homepage</a></div>
+                <div class="text-[#9D9D9D]">></div>
+                <div><a href="CourselistingPage.html">Login/Register</a></div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!--login-->
+    <section class="wrapper-login">
+        <div class="wrapper w-[630px] flex flex-col px-[30px] py-[30px] gap-[30px]">
+            <h1>Login</h1>
+            <form class="flex flex-col gap-[30px]" onsubmit="event.preventDefault(); Login();">
+                <div class="input-box border border-[#9D9D9D] py-[10p] px-[25px] rounded-[16px]">
+                    <input type="text" name="username" id="username" placeholder="Email or username*" required>
+
+                </div>
+                <div class="input-box relative border border-[#9D9D9D] py-[10p] px-[25px] rounded-[16px]">
+                    <input type="password" name="password" id="password" placeholder="Password*"  class="password" required>
+                    <i class='bx bx-show' onclick="showpassword()"></i>
+                </div>
+                <div class="remember-forget flex justify-between">
+                    <label class="flex gap-[5px]">
+                        <input type="checkbox" name="rememberme" id="rememberme">Remember me
+                    </label>
+                    <a class="text-[#000000]" href="Forgetpassword.html">Lost your password?</a>
+                </div>
+                <button class="btn-login" type="submit">Login</button>
+                
+
+                <div class="register-link flex justify-between">
+                    <p>Don't have an account? <a href="Registerpage.html">Register</a>
+                    </p>
+                </div>
+                
+            </form>
+        </div>
+    </section>
+    
+    <footer class="flex flex-col gap-[90px] mt-[90px] pt-[90px] bg-[#F5F5F5] justify-center items-center">
+        <div class="footerPage flex justify-evenly">
+            <!--Edupressfootagebox-->
+            <div class="w-1/5  flex gap-[32px] flex-col">
+                <div class="logo flex text-[Black] font-bold text-[28px] leading-[33.6px]">
+                    <img src="./picture/Isolation_Mode.png">
+                    <p>EduPress</p>
+                    
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+                
+            
+            <div class="flex gap-[32px] flex-col">
+                <div>
+                    <h1>GET HELP</h1>
+                </div>
+                <div class="Edupressfootagebox"><ul>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Latest Articles</a></li>
+                    <li><a href="">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex gap-[32px] flex-col">
+                <div><h1>PROGRAMS</h1></div>
+                <div class="Edupressfootagebox">
+                    <ul>
+                        <li><a href="">Art & Design</a></li>
+                        <li><a href="">Business</a></li>
+                        <li><a href="">IT & Spftware</a></li>
+                        <li><a href="">Langugage</a></li>
+                        <li><a href="">Programming</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="w-1/5 flex   flex-col gap-[32px]">
+                <div class=""><h1>CONTACT US</h1></div>
+                <div class="Edupressfootagebox">
+                    <ul>
+                        <li><a href="">Address: 2321 New Design Str, Lorem Ipsum10 Hudson Yards, USA</a></li>
+                        <li><a href="">Tel: + (123) 2500-567-8988</a></li>
+                        <li><a href="">Mail: supportlms@gmail.com</a></li>
+                    </ul>
+                </div>
+                <div class="flex gap-[12px]">
+                    <div>
+                        
+                        <a href="https://www.facebook.com/"><img src="picture/facebook.png"></a>
+                    </div>
+                    <div>
+                        <a href=""><img src="picture/incon2.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.instagram.com/"><img src="picture/ins.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://x.com/"><img src="picture/X.png"></a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/"><img src="picture/ytb.png"></a>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+
+        <!--Copyright-->
+        <div class="Copyright mb-[30px]">
+            <p>Copyright © 2024 LearnPress LMS | Powered by ThimPress</p>
+        </div>
+
+    </footer>
+    <div class="" id="sticky">
+        <button class="scroll-up-btn">
+            <i class="arrow-up"></i>
+        </button>  
+        </div>
+
+
+        <script src="/js/index.js"></script>
+</body>
+</html>
